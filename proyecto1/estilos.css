@@ -1,0 +1,49 @@
+*{
+  /*border: 1px solid lightgreen;
+  */box-sizing: border-box;  
+}
+
+.fila:after {
+	clear: both;
+}
+
+*[class^="columna"] {
+  	display: block;
+  	float: left;
+  	overflow: hidden;
+  	height: 150px;
+}
+
+.fila {
+	width: 100%;
+	display: block;
+}
+
+.columna50{
+	width: 50%;
+	
+}
+
+.columna25{
+	width: 25%;
+	
+}
+
+.columna100{
+	width: 100%;
+	
+}
+
+*[class^="columna"] > img {
+  	max-width: 100%;
+  	padding: 1%;
+ }
+
+ .hero > [class^="columna"] {
+ 	height: 300px;
+
+ }
+
+ div{	
+ 	padding: 1%;
+ }
