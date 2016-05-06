@@ -3,6 +3,46 @@
   */box-sizing: border-box;  
 }
 
+.container {
+	max-width: 75%;
+    margin: 0 auto;
+}
+
+
+.header {
+	width: 100%;
+	background-image: url("img/fondo.jpg");
+	height: 100px;
+	background-color: gray;
+	opacity: .7;
+}
+
+
+ul.menu li a {
+	text-decoration: none;
+	color: 	white;
+	padding: 1em;
+	font-size: 11px;
+  	font-family: "Neue Haas Grotesk";
+	font-weight: bold;    
+
+}
+
+li {
+	display: 	inline-block;
+	align-items: right;
+}
+
+ul.menu li a:hover {
+  color: orange;
+  
+}
+
+
+li::after {
+	clear: both;
+}
+
 .fila:after {
 	clear: both;
 }
@@ -11,12 +51,11 @@
   	display: block;
   	float: left;
   	overflow: hidden;
-  	height: 150px;
-}
+}  	
 
 .fila {
 	width: 100%;
-	display: block;
+	
 }
 
 .columna50{
@@ -34,6 +73,20 @@
 	
 }
 
+.columna70{
+
+	display: block;
+	float: right;
+
+}
+
+.columna25{
+	display: block;
+	float: left;
+	
+}
+
+
 *[class^="columna"] > img {
   	max-width: 100%;
   	padding: 1%;
@@ -44,6 +97,8 @@
 
  }
 
+/*
  div{	
  	padding: 1%;
  }
+*/
