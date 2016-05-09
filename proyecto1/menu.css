@@ -1,0 +1,49 @@
+*{
+ /* border: 1px solid lightgreen;
+    */
+  	}
+
+.container {
+	width: 100%;
+	background-image: url("img/fondo.jpg");
+	height: 80px;
+	background-color: gray;
+	opacity: .7;
+}
+
+.columna70{
+
+	display: 	inline-block;
+	float: right;
+
+}
+
+.columna25{
+	display: inline-block;
+	float: left;
+	
+}
+
+
+
+ul.menu li a {
+	text-decoration: none;
+	color: 	white;
+	padding: 1em;
+	font-size: 11px;
+  	font-family: "Neue Haas Grotesk";
+	font-weight: bold;    
+
+}
+
+li {
+	display: 	inline-block;
+	align-items: right;
+}
+
+ul.menu li a:hover {
+  color: orange;
+  
+}
+
+
