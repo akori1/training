@@ -1,0 +1,98 @@
+{
+/*  border: 1px solid lightgreen;
+ */
+}
+
+h1 {
+	text-align: center;
+}
+
+
+*[class^="imagen"] {
+	background-size: contain;
+	width: 100%;
+	height: 100px;
+	background-repeat: no-repeat;
+	margin:3px;
+}
+
+.imagen1{
+	background-image: url("img/1.jpg");
+	}
+
+.imagen2{
+	background-image: url("img/2.jpg");
+	}
+
+.imagen3{
+	background-image: url("img/3.jpg");
+	}
+
+
+
+body {
+	font-family: "Arial";
+	}
+	
+
+@media (min-width: 768px) {
+	/*desktop y tablet*/
+	.columna65 {
+		width: 65%;
+
+	}
+
+	.columna35 {
+		width: 35%;
+
+	}
+
+}
+@media (min-width: 768px) and (max-width: 1000px) {
+	/*tablets*/
+
+	body {
+		font-weight: bold;	}
+
+	*[class^="imagen"] {
+	height: 200px;
+	}
+	
+	.imagen1{
+	background-image: url("img/4.jpg");
+	}
+
+	.imagen2{
+		background-image: url("img/5.jpg");
+	}
+
+	.imagen3{
+		background-image: url("img/6.jpg");
+	}
+
+}
+
+@media (min-width: 1000px) {
+	/*desktop*/
+	body {
+		font-style: italic;
+		}
+
+	*[class^="imagen"] {
+	height: 300px;
+	}
+	
+	.imagen1{
+	background-image: url("img/7.jpg");
+	}
+
+	.imagen2{
+		background-image: url("img/8.jpg");
+	}
+
+	.imagen3{
+		background-image: url("img/9.jpg");
+	}
+
+}
+
