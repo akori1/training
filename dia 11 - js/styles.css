@@ -1,0 +1,11 @@
+.container-fluid {
+	background:gray;
+}
+
+.container {
+	background:white;
+}
+
+.padding2 {
+	padding: 2%;
+}
