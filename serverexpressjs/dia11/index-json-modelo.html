@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CV</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+<body>
+
+	<div class="container-fluid">
+		<main class="container">
+
+		<div class="row">
+			<h1 id="nom" class="padding2"></h1>
+			<p id="about" class="padding2"></p>
+			<div id="exp"></div>
+			<div id="con"></div>
+		</div>
+
+		
+
+<script type="text/javascript" src="js/jquery-2.2.3.js"></script>
+
+<script type="text/javascript">
+	var cvTest = {
+		'nom':'Lucas',
+		'about': 'sobre lucas',
+		'exp': [{
+				'lugar' : 'gl',
+				'pos' : 'training',
+				'time' : '2016'}
+				],
+		'con': ['tec1', 'tec2']
+		};
+
+var jqObj = $('<div></div>');
+$.each (cvTest, function(key, value) {
+		if (typeof value == 'string') {
+				$('#'+key).html(value);
+				 }else {
+					
+					var ul = $('<ul></ul>');
+					$.each (value, function(k,v) {
+						if (typeof v == 'string') {
+							var li = $('<li></li>');
+							li.html(v);
+							ul.append(li);
+							}  else {
+								$('#'+'exp').html('holis');
+
+								/*$.each (value, function(k2,v2) {
+								var li = $('<li></li>');
+								li2.html(v2.value);
+								ul.append(li2);
+								}*/
+							}
+						}
+
+						);
+					$('#'+key).append(ul);
+					
+					}
+				
+			}
+
+		)
+
+$.getJSON ('cv.json', function (cv) {
+	console.log('holis');
+}
+
+	);
+
+</script>
+
+</body>
+</html>

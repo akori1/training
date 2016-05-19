@@ -1,0 +1,8 @@
+"nom":"Lucas",
+"about": "sobre lucas",
+"exp": [{
+	"lugar" : "gl",
+	"pos" : "training",
+	"time" : "2016"}
+	],
+"con": ["tec1", "tec2"]
