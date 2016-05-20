@@ -22,6 +22,8 @@ module.exports	= function (server) {
 
 			if (usuarios[userId]) {
 				res.send (200, usuarios[userId]);
+
+				
 			}else {
 				res.send (404, 'Usuario no encontrado');
 			}
