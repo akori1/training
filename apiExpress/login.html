@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login</title>
+</head>
+<body>
+
+	<form action="">
+			<input type="text" name="user" placeholder="usuario">
+			<input type="text" name="pass" placeholder="contraseña">
+			<input type="submit" id="button" value="enviar">
+	</form>
+
+	<script type="text/javascript" src="js/jquery-2.2.3.js"></script>
+
+	<script type="text/javascript">
+		// cuando la pag este cargado y se haga clic, se envian los datos
+		$(function(){
+
+		 // seleccionamos un elemento como en css -> $('form input[type=text]')
+		 $('form input[type=submit]').on('click', onClick)
+
+		  function onClick(){
+		   
+		  $.post({
+
+		   url:'/persona',
+
+		   data:{
+		    nombre:$('input[name=user]').val()
+		   },
+
+		   success: function(data){ // cuando el servidor esta listo, envia data
+		    console.log('respuesta del server', data); // muestra en la consola de front
+		   }
+		  });
+
+		  return false; // evitar todo lo que sigue despues del click
+		  }
+		});
+				
+	</script>
+</body>
+</html>

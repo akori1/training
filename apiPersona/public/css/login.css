@@ -1,0 +1,11 @@
+.form-group .help-block{
+		display: none;
+	}
+	
+	.form-group.has-error.required .help-block.required{
+		display: block;
+	}
+	
+	.form-group.has-error.invalid .help-block.invalid{
+		display: block;
+	}
