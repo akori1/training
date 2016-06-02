@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	 <style>
+	       .remove{
+	            display: none;
+	            border: none;
+	            background-color:none;
+	            
+	        }
+	        
+	        div div:hover .remove{
+	            display: inline-block;
+	        }
+	    </style>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">	
+</head>
+<body>
+
+	<div class="container">
+		<form class="form-inline" role="form">
+	  		<div class="form-group">
+			    <label for="tarea">Tarea:</label>
+			    <input  type="text" class="form-control" id="tarea" placeholder="Escribe aqui tu tarea">
+			</div>
+  		</form>
+	</div>
+	<div class="container contenido" id="main">
+	
+	</div>
+	
+
+
+	<script type="text/javascript" src="js/jquery-2.2.3.js"></script>
+	<script type="text/javascript" src="js/tareas.js" ></script>
+	
+</body>
+</html>

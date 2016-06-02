@@ -1,26 +1,37 @@
+var     
+   templateContainer = $('#templates'),
+   personaTemplate;
+
+   templateContainer.find('#personasTemplate').load('html/personas-template.html', function(){
+    personaTemplate = templateContainer.find('#personasTemplate').val();
+        
+    });
+
 function mostrarPersonas () {
 
     $.get("/persona", function(data){
        
-
+        var
+            personasHtml = '';
        	for(var i =0 ; i< data.length;i++){
 
-        $('#mostrarPersona').append('<div class="row elementos"> <span class="col-xs-1"> ID: ' 
-        							+ data[i].id 
-        							+ '</span > <span class="col-xs-3"> Nombre: ' 
-        							+ data[i].nombre 
-        							+ '</span > <span class="col-xs-3"> Edad: ' 
-        							+ data[i].edad 
-        							+ '</span > <span class="col-xs-3"> Email: ' 
-        							+ data[i].email
-        							+ '</span>'
-                                    + ' <span class="col-xs-1"> <form><input type="button" class="elemento btn btn-danger '
-                                    + '" value="Eliminar" data-id="' + data[i].id  + '"></form> </span>'
-                                    +'</div>')
+        personasHtml += generarHtml(data[i]);
        
        }
 
+        $('#mostrarPersona').append(personasHtml)
+
     });
+
+}
+
+function generarHtml (persona){    
+        return personaTemplate
+        .replace (/%id%/g,persona.id)
+        .replace (/%nombre%/g,persona.nombre)
+        .replace (/%edad%/g,persona.edad)
+        .replace (/%email%/g,persona.email);
+
 
 }
 
@@ -45,22 +56,28 @@ $(function listar(){
             newEdad = $('#edad').val(),
             newEmail = $('#email').val();
        
-        $.ajax({
-        url:'/persona',
-        method:'POST',
-        data : {
-        nombre: newNombre,
-        edad: newEdad,
-        email: newEmail
-          },
+        
+        if((newNombre.length > 1) && (newEdad.length > 0) && (newEmail.length > 1))  {
+            $.ajax({
+            url:'/persona',
+            method:'POST',
+            data : {
+            nombre: newNombre,
+            edad: newEdad,
+            email: newEmail
+            },
             success: function(data){ 
-                
                 alert('Usuario Agregado'); 
                 $("#mostrarPersona").empty();
                 mostrarPersonas();
-            }
-        });
-       
+                limpiarInputs('nombre');
+                limpiarInputs('edad');
+                limpiarInputs('email');
+                }
+            });
+        }else {
+            alert('Debes complertar todos los campos'); 
+        }
         return false;
     }  
 
@@ -88,4 +105,6 @@ $(function listar(){
 });
 
 
-
+function limpiarInputs (input) {
+    $('#'+input).val('');
+}
