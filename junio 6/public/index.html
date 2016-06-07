@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<!--<link rel="stylesheet" type="text/css" href="css/registro.css">-->
+		
+</head>
+<body>
+
+	<div class="container col-xs-4 col-xs-offset-4">
+		<label><h1>Registro</h1></label>
+		<form class="form-horizontal" role="form">
+	  		<div class="form-group">
+			    <label for="firstName">First Name:</label>
+			    <input type="text" class="form-control" id="firstName" data-id="firstName" placeholder="Ej: Juan">
+			</div>
+	  		<div class="form-group">
+			    <label for="lastName">Last Name:</label>
+			    <input type="text" class="form-control" id="lastName" data-id="lastName" placeholder="Ej: Perez">
+	 		 </div>
+	 		<div class="form-group">
+	 		<label for="Gender">Gender:</label>
+		 		<div class="radio">
+		  			<label class="col-xs-offset-2"><input type="radio" data-id="M" value="M" id="gender" name="gender">Male</label>
+					<label class="col-xs-offset-1"><input type="radio" data-id="F"  value="F" id="gender" name="gender">Female</label>
+				</div>
+	  		</div>
+	  		<div class="form-group">
+			    <label for="birthday">Birthday:</label>
+			    <input type="date" class="form-control" id="birthday" data-id="birthday" placeholder="Ej: 01/01/1990">
+	  		</div>
+	  		<div class="form-group">
+			    <label for="address">Address:</label>
+			    <input type="text" class="form-control" id="address" data-id="address" placeholder="Ej: Avenida siempre viva 1234">
+	  		</div>
+	  		<div class="form-group">
+			    <label for="photo">Photo:</label>
+			    <input type="text" class="form-control" id="photo" data-id="photo" placeholder="Ej: www.tufoto.com">
+	  		</div>
+	  		<div class="form-group">
+			    <label for="email">Email: (obligatorio)</label>
+			    <input type="text" class="form-control" id="email" data-id="email" placeholder="Ej: nombre@globallogic.com.ar">
+	  		</div>
+	  		<div class="form-group">
+			    <label for="password">Contraseña: (obligatorio)</label>
+			    <input type="password" class="form-control" id="password" data-id="password" >
+	  		</div>
+	  		<div class="form-group">
+			    <label for="password-check">Repite tu contraseña: (obligatorio)</label>
+			    <input type="password" class="form-control" id="password-check" data-id="password-check">
+	  		</div>
+			<button type="submit" class="btn btn-default agregar">Enviar</button>
+		</form>
+	</div>
+
+<script type="text/javascript" src="js/jquery-2.2.3.js"></script>
+<script type="text/javascript" src="js/personas.js" ></script> 
+	
+</body>
+</html>

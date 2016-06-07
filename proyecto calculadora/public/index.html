@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>calculadora</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <style>
+        .calculadora div{
+            padding: 0;
+        }
+        .input{
+            text-align: right;
+        }
+        
+        .btn{
+            width:100%; 
+        }
+    </style>    
+</head>
+<body>
+    <div class="container">
+    <h1>Esto es un titulo con font face</h1>
+        <div class="row">
+            <div class="col-xs-offset-4 col-xs-4 calculadora">
+                <div class="row">
+                    <input type="text" class="input form-control">
+                </div>
+                <div class="row">
+                    <div class="col-xs-3"><button type="button" class="btn btn-primary butonNumero">1</button></div>
+                    <div class="col-xs-3"><button type="button" class="btn btn-primary butonNumero">2</button></div>
+                    <div class="col-xs-3"><button type="button" class="btn btn-primary butonNumero">3</button></div>
+                    <div class="col-xs-3"><button type="button" class="btn btn-primary operacion" data-operacion="multiplicar">x</button></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3"><button type="button" class="btn btn-primary butonNumero">4</button></div>
+                    <div class="col-xs-3"><button type="button" class="btn btn-primary butonNumero">5</button></div>
+                    <div class="col-xs-3"><button type="button" class="btn btn-primary butonNumero">6</button></div>
+                    <div class="col-xs-3"><button type="button" class="btn btn-primary operacion"  data-operacion="dividir">/</button></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3"><button type="button" class="btn btn-primary butonNumero">7</button></div>
+                    <div class="col-xs-3"><button type="button" class="btn btn-primary butonNumero">8</button></div>
+                    <div class="col-xs-3"><button type="button" class="btn btn-primary butonNumero">9</button></div>
+                    <div class="col-xs-3"><button type="button" class="btn btn-primary operacion"  data-operacion="sumar">+</button></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3"><button type="button" class="btn btn-primary butonNumero">0</button></div>
+                    <div class="col-xs-3"><button type="button" class="btn btn-primary operacion"  data-operacion="igual">=</button></div>
+                    <div class="col-xs-3"><button type="button" class="btn btn-primary operacion"  data-operacion="clear">clear</button></div>
+                    <div class="col-xs-3"><button type="button" class="btn btn-primary operacion"  data-operacion="restar">-</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="/js/jquery-2.2.3.js"></script>
+    <script type="text/javascript" src="js/calculadora.js"></script>
+
+</body>
+</html>
